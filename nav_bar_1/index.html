@@ -5,17 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
 
     <header>
         <div class="header-box">
-            <div class="logo">
-                <a href=""><img src="image/logo-1.webp" alt="web-logo"></a>
+            <div class="logo-box">
+                <a href="#">
+                    <img  src="image/logo-1.png" alt="web-logo">
+                </a>
             </div>
-
-            <nav class="menu">
-                <ul>
+        
+        <div class="header-menu">
+            <nav class="main-navigation">
+                <button id="toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div>
+                <ul class="non-toggle" id="nav-link">
                 <li><a href="">WHAT WE DO</a></li>
                 <li><a href="">TYPES OF SOFTWARE</a></li>
                 <li><a href="">CASE STUDIES</a></li>
@@ -23,10 +32,20 @@
                 <li><a href="">CONTACT US</a></li>
                 <li><a href="">GET A FREE QUOTE</a></li>
                 </ul>
-
+            </div>
             </nav>
         </div>
+    </div>
     </header>
+
+    <script>
+        const toggleButton = document.getElementById('toggle');
+        const navLink = document.getElementById('nav-link');
+
+        toggleButton.addEventListener('click',()=>{
+            navLink.classList.toggle('toggle');
+        })
+    </script>
     
 </body>
 </html>
